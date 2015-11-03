@@ -7,6 +7,9 @@ pg.connect("postgres://msetubdazzaoeh:tFnxTsFV4abVjFzkBrbFCsGpjX@ec2-107-21-221-
   if (err) throw err;
   console.log('Connected to postgres! Getting schemas...');
 
-copy emp(id,first_name,last_name,company_name,address,city,county,state,zip,phone1,email) FROM 'us-500.csv' WITH DELIMITER AS ',' CSV;
+
+
+client
+.query('(copy emp(id,first_name,last_name,company_name,address,city,county,state,zip,phone1,email) FROM 'us-500.csv' WITH DELIMITER AS ',' CSV)');
 
 });
