@@ -10,6 +10,6 @@ pg.connect("postgres://msetubdazzaoeh:tFnxTsFV4abVjFzkBrbFCsGpjX@ec2-107-21-221-
 
 
 client
-.query('(copy emp(id,first_name,last_name,company_name,address,city,county,state,zip,phone1,email) FROM '/us-500.csv' WITH DELIMITER AS ',' CSV)');
+.query('(copy emp(id,first_name,last_name,company_name,address,city,county,state,zip,phone1,email) FROM '/us-500.csv' DELIMITER AS ',' CSV)');
 
 });
