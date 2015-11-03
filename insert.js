@@ -29,6 +29,6 @@ pg.connect("postgres://msetubdazzaoeh:tFnxTsFV4abVjFzkBrbFCsGpjX@ec2-107-21-221-
   */  
     
     client
-    .query("CREATE TABLE IF NOT EXISTS emp(id INT primary key, first_name varchar(64), last_name varchar(64), company_name varchar(64), address varchar(64), city varchar(64), county varchar(64), state varchar(64), zip varchar(8), phone1 varchar(15), email varchar(64), web citext )");
+    .query("CREATE TABLE IF NOT EXISTS emp(id INT primary key, first_name varchar(64), last_name varchar(64), company_name varchar(64), address varchar(64), city varchar(64), county varchar(64), state varchar(64), zip varchar(8), phone1 varchar(15), email varchar(64))");
     console.log('table created');
 });
