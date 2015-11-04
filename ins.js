@@ -27,7 +27,7 @@ function (line) {
                     client.end();
                 }
             });      
-        });
+    
     }
 });
 
