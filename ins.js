@@ -11,7 +11,7 @@ fs.readFileSync('./us.csv').toString().split('\n').forEach(function (line) {
     
     var i = 0, count = 0; 
     for (i = 1; i <=arr.length; i++) {
-        client.query("INSERT into emp(id,first_name,last_name,company_name,address,city,county,state,zip,phone1,email) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)", [arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9], arr[10]]);
+    var query = client.query("INSERT into emp(id,first_name,last_name,company_name,address,city,county,state,zip,phone1,email) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)", [arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9], arr[10]]);
             query.on('row', function(err, result) {
                 if (err) {
                     console.log(err);
