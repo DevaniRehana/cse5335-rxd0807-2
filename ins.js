@@ -1,7 +1,7 @@
 
 var pg = require('pg');
 
-pg.connect("postgres://msetubdazzaoeh:tFnxTsFV4abVjFzkBrbFCsGpjX@ec2-107-21-221-59.compute-1.amazonaws.com:5432/d446894mce560p");
+client = pg.connect("postgres://msetubdazzaoeh:tFnxTsFV4abVjFzkBrbFCsGpjX@ec2-107-21-221-59.compute-1.amazonaws.com:5432/d446894mce560p");
 var fs  = require("fs");
 
 fs.readFileSync('./us.csv').toString().split('\n').forEach(function (line) { 
