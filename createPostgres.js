@@ -27,6 +27,13 @@ pg.connect("postgres://msetubdazzaoeh:tFnxTsFV4abVjFzkBrbFCsGpjX@ec2-107-21-221-
     .on('row', function(row) {
       console.log(JSON.stringify(row));
     });
+    
+    
+    var query = client.query("SELECT id from emp");
+    query.on('row', function(row) {
+    console.log(row.name);
+    });
+    query.on('end', client.end.bind(client));
   */  
     
     client

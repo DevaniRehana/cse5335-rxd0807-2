@@ -7,9 +7,12 @@ pg.connect("postgres://msetubdazzaoeh:tFnxTsFV4abVjFzkBrbFCsGpjX@ec2-107-21-221-
   if (err) throw err;
   console.log('Connected to postgres! Getting schemas...');
 
-
+/*
 
 client
-.query('(copy emp(id,first_name,last_name,company_name,address,city,county,state,zip,phone1,email) FROM '/us.csv' DELIMITER AS '\t' CSV)');
+.query('(copy emp(id,first_name,last_name,company_name,address,city,county,state,zip,phone1,email) FROM './us.csv' DELIMITER AS '\t' CSV)');
 
 });
+
+*/
+
