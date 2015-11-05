@@ -5,7 +5,7 @@ client.connect();
 var fs  = require("fs");
 
 fs.readFileSync('./us.csv').toString().split('\n').forEach(function (line) { 
-    console.log(line);
+   // console.log(line);
     str = line;
     var arr = str.split(",");
     
@@ -25,7 +25,8 @@ fs.readFileSync('./us.csv').toString().split('\n').forEach(function (line) {
                     console.log('Client will end now!!!');
                     client.end();
                 }
-            });      
+            });    
+            console.log("Rows in table successfully inserted. Congrats!!!");  
     /*
     
     client.query("DROP TABLE IF EXISTS emp1");
