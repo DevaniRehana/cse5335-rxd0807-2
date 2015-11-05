@@ -19,18 +19,18 @@ var fs  = require("fs");
 
 //var mydocuments = fs.readFile('us.json', 'utf8', function (err, data) {
 
-fs.readFileSync('./us.csv').toArray().split('\n').forEach(function (err,line) { 
+fs.readFileSync('./us.csv').toArray().split('\n').forEach(function(err,data) { 
       if (err) {
                console.log(err);
                 }
      else{
-          var arr = line.split(",");
+          var arr = data.split(",");
   
    console.log(arr[0]);
    console.log(arr);
    }
 
-     collection.insert(arr, function(err, docs) { 
+     collection.insert(arr, function(err, data) { 
      if (err) {
                     console.log(err);
                 } else {
