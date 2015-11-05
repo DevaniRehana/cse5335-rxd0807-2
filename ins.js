@@ -10,7 +10,7 @@ fs.readFileSync('./us.csv').toString().split('\n').forEach(function (line) {
     var arr = str.split(",");
     
    
-    
+    /*
     var query = client.query("INSERT into emp1(first_name,last_name,company_name,address,city,county,state,zip) VALUES($1, $2, $3, $4, $5, $6, $7, $8)", [arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7]]);
             query.on('row', function(err, result) {
                 if (err) {
@@ -26,5 +26,9 @@ fs.readFileSync('./us.csv').toString().split('\n').forEach(function (line) {
                     client.end();
                 }
             });      
+    */
     
+    client.query("DROP TABLE IF EXISTS emp1");
+    done();
+    console.log("Table successfully deleted");
 });
