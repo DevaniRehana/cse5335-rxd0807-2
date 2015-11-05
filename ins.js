@@ -29,6 +29,5 @@ fs.readFileSync('./us.csv').toString().split('\n').forEach(function (line) {
     */
     
     client.query("DROP TABLE IF EXISTS emp1");
-    done();
     console.log("Table successfully deleted");
 });
