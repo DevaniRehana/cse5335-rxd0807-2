@@ -29,7 +29,7 @@ fs.readFileSync('./us.csv').toString().split('\n').forEach(function (line) {
             console.log("Rows in table successfully inserted. Congrats!!!");  
     
     */
-    client.query("DROP TABLE IF EXISTS employee");
+    client.query("DROP TABLE IF EXISTS emp");
     console.log("Table successfully deleted");
     
     
