@@ -5,7 +5,7 @@ client.connect();
 var fs  = require("fs");
 
 fs.readFileSync('./us.csv').toString().split('\n').forEach(function (line) { 
-   // console.log(line);
+   console.log(line);
     str = line;
     var arr = str.split(",");
     
