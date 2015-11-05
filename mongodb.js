@@ -11,7 +11,7 @@ var mongodb = require('mongodb');
     //db.close();
   }
   
-db.createCollection(employees); 
+db.createCollection("employees"); 
 console.log('Table created!');
 db.close;
   });
