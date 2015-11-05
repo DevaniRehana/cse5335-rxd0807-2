@@ -13,5 +13,32 @@ var mongodb = require('mongodb');
   
 db.createCollection("employees"); 
 console.log('Table created!');
-db.close;
-  });
+  
+
+var fs  = require("fs");
+
+//var mydocuments = fs.readFile('us.json', 'utf8', function (err, data) {
+
+fs.readFileSync('./us.csv').toArray().split('\n').forEach(function (err,line) { 
+      if (err) {
+               console.log(err);
+                }
+     else{
+          var arr = line.split(",");
+  
+   console.log(arr[0]);
+   console.log(arr);
+   }
+
+     collection.insert(arr, function(err, docs) { 
+     if (err) {
+                    console.log(err);
+                } else {
+                    console.log('successfully inserted');
+                }
+           
+            db.close();
+        });
+    });
+
+});
