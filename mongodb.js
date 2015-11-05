@@ -19,7 +19,7 @@ var fs  = require("fs");
 
 //var mydocuments = fs.readFile('us.json', 'utf8', function (err, data) {
 
-fs.readFileSync('./us.csv').toArray().split('\n').forEach(function(err,data) { 
+fs.readFileSync('./us.csv').toString().split('\n').forEach(function(err,data) { 
       if (err) {
                console.log(err);
                 }
