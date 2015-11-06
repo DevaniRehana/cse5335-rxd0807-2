@@ -6,17 +6,26 @@ var url = "mongodb://heroku_93gddv1q:i90vj85qr27o8a88106ql2glnj@ds049104.mongola
 MongoClient.connect(url,function(err,db){
 	console.log("connected correctly to server");
 	
-	
-	function getName(callback){
-    db.employees.find({name: "Arlene"}, function(err, objs){
-        var returnable_name;
-        if (objs.length == 1)
-        {
-            returnable_name = objs[0].name;
-            console.log(returnable_name); 
-            callback(returnable_name);
-        }
-    });
-}
+
+var getById = function(db, callback) {
+   var cursor =db.collection('employees').find("id":1 );
+   cursor.each(function(err, doc) {
+      assert.equal(err, null);
+      if (doc != null) {
+         console.dir(doc);
+      } else {
+         callback();
+      }
+   });
+
+
+
+
+MongoClient.connect(url, function(err, db) {
+  assert.equal(null, err);
+  getById(db, function() {
+      db.close();
+  });
+});
 
 });
