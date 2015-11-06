@@ -17,25 +17,25 @@ MongoClient.connect(url,function(err,db){
 
 		if(err)
 		{
-		console.log('err');
+			console.log('err');
 		}
 		else
 		{
-		var arr = JSON.parse(data);
-		console.log(arr[0]);
+			var arr = JSON.parse(data);
+		    for (var i = 0; i < arr.length; i++) {
+
+      	    employees.insert(arr[i], function(err,result){
+       		 if(err)
+        {
+        console.log('err');
+        }
+        else{
+        console.log(result);
+        console.log("Successfully inserted");
+		}
+		});
+		}
 		}
 	});	
    
-   /*
-   db.open(function(err, client){
-   MongoClient.createCollection("employees", function(err, col) {
-   MongoClient.collection("employees", function(err, col) {
-             for (var i = 0; i < 100; i++) {
-                 col.insert({c:i}, function() {});
-             }
-         });
-    });
-});
-   
-   */
 });
