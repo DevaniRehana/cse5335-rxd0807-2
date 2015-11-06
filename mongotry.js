@@ -22,7 +22,7 @@ MongoClient.connect(url,function(err,db){
 		else
 		{
 			var arr = JSON.parse(data);
-		    for (var i = 0; i <= arr.length; i++) {
+		    for (var i = 0; i < arr.length; i++) {
 		    
 		    
 
