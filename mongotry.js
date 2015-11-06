@@ -7,11 +7,24 @@ MongoClient.connect(url,function(err,db){
 	console.log("connected correctly to server");
 	//db.close();
    
-   db.createCollection("employees"); 
-   var fs  = require("fs");
+  
    
    db.createCollection("employees"); 
    console.log('Table created!');
+   
+   var fs  = require("fs");
+   fs.readFile('./us.json', 'utf8', function(err,data){
+
+		if(err)
+		{
+		console.log('err');
+		}
+		else
+		{
+		var arr = JSON.parse(data);
+		console.log(arr[0]);
+		}
+		
    
    /*
    db.open(function(err, client){
