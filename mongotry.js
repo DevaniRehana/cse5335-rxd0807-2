@@ -23,9 +23,6 @@ MongoClient.connect(url,function(err,db){
 		{
 			var arr = JSON.parse(data);
 		    for (var i = 0; i < arr.length; i++) {
-		    
-		    
-
       	    db.collection('employees').insertOne(arr[i], function(err,result){
        		 if(err)
         {
