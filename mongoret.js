@@ -8,7 +8,7 @@ MongoClient.connect(url,function(err,db){
 	
 
 var getById = function(db, callback) {
-   var cursor =db.collection('employees').find("id":1 );
+   var cursor =db.collection('employees').find("first_name":"James" );
    cursor.each(function(err, doc) {
       assert.equal(err, null);
       if (doc != null) {
