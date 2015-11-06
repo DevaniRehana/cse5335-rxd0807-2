@@ -24,7 +24,7 @@ MongoClient.connect(url,function(err,db){
 		var arr = JSON.parse(data);
 		console.log(arr[0]);
 		}
-		
+	});	
    
    /*
    db.open(function(err, client){
