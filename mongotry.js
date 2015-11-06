@@ -22,11 +22,11 @@ MongoClient.connect(url,function(err,db){
 		else
 		{
 			var arr = JSON.parse(data);
-		    for (var i = 0; i < arr.length; i++) {
+		    for (var i = 0; i <= arr.length; i++) {
 		    
 		    
 
-      	    db.collection('employees').insertOne(arr[i], function(err,result){
+      	    db.collection('employees').insert(arr[i], function(err,result){
        		 if(err)
         {
         console.log('err');
