@@ -17,20 +17,24 @@ console.log('Table created!');
 
 var fs  = require("fs");
 
+var lines = [];
+
 //var mydocuments = fs.readFile('us.json', 'utf8', function (err, data) {
 
-fs.readFileSync('./us.csv').toString().split('\n').forEach(function(err,data) { 
+fs.readFileSync('./us.csv').toString().split('\n').forEach(function(err,line) { 
+      
       if (err) {
                console.log(err);
                 }
      else{
+          connsole.log(line);
           var arr = data.split(",");
-  
-   console.log(arr[0]);
-   console.log(arr);
+          console.log(arr)
+          console.log(arr[0]);
    }
+   });
 
-     collection.insert(arr, function(err, data) { 
+    /* db.collection("employees").insert(arr, function(err, result) { 
      if (err) {
                     console.log(err);
                 } else {
@@ -39,6 +43,6 @@ fs.readFileSync('./us.csv').toString().split('\n').forEach(function(err,data) {
            
             db.close();
         });
-    });
+    }); */
 
 });
