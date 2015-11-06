@@ -17,6 +17,8 @@ var getById = function(db, callback) {
          callback();
       }
    });
+   
+}
 
 
 
