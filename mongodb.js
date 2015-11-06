@@ -28,14 +28,14 @@ fs.readFileSync('./us.csv').toString().split('\n').forEach(function(err,line) {
                 }
      else{
           connsole.log(line);
-          console.log("lines are printed");
-          
+          //console.log("lines are printed");
+          }
           var arr = data.split(",");
          console.log("lines are split and stored in array");
 
           //console.log(arr)
           console.log(arr[0]);
-   }
+   
    });
 
     /* db.collection("employees").insert(arr, function(err, result) { 
