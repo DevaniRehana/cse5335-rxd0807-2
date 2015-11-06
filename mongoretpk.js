@@ -1,5 +1,7 @@
 
 
+
+
 var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 
@@ -8,8 +10,8 @@ MongoClient.connect(url,function(err,db){
 	console.log("connected correctly to server");
 	
 
-var getByName = function(db, callback) {
-   var cursor =db.collection('employees').find({"first_name":"James"});
+var getById = function(db, callback) {
+   var cursor =db.collection('employees').find({"id":1});
    cursor.each(function(err, doc) {
       assert.equal(err, null);
       if (doc != null) {
@@ -26,7 +28,7 @@ var getByName = function(db, callback) {
 
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
-  getByName(db, function() {
+  getById(db, function() {
       db.close();
   });
 });
