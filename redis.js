@@ -6,4 +6,10 @@ client.auth('p8naufj27ovrb0c31g4iru1gk18');
 
 client.on('connect', function() {
     console.log('Connected to Redis');
+
+
+client.set('framework', 'AngularJS', function(err, reply) {
+  console.log(reply);
+});
+
 });
