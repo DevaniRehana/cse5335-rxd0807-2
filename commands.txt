@@ -1,0 +1,9 @@
+
+MongoDB
+
+To connect mongodb, run the script mongodb.js as follows:
+
+heroku run bash
+npm install connect
+npm install mongodb
+node mongodb.js
