@@ -19,34 +19,35 @@ MongoClient.connect(url,function(err,db){
 		else
 		{
 			
-			var doc = {
-			_id: employees.id,
-			first_name: employees.first_name,
-			last_name: employees.last_name,
-			company_name: employees.company_name,
-			address: employees.address,
-			city: employees.city,
-			country: employees.country,
-			state: employees.state,
-			zip : employees,zip
+			
+			//var arr = JSON.parse(doc);
+
+	 for (var i = 0; i < arr.length; i++) {
+	      var doc = {
+			_id: arr[i].id,
+			first_name: arr[i].first_name,
+			last_name: arr[i].last_name,
+			company_name: arr[i].company_name,
+			address: arr[i].address,
+			city: arr[i].city,
+			country: arr[i].country,
+			state: arr[i].state,
+			zip : arr[i].zip
 			
 			}
 			
-			var arr = JSON.parse(doc);
-
-		    for (var i = 0; i < arr.length; i++) {
-      	    db.collection('employees').insertOne(arr[i], function(err,result){
-       		 if(err)
-        {
-        console.log('err');
-        }
-        else{
-        console.log(result);
-        console.log("Successfully inserted");
-		}
+      	  db.collection('employees').insertOne(arr[i], function(err,result){
+       		 if(err){
+        
+             console.log('err'); 
+             }
+        
+             else{
+             console.log(result);
+             console.log("Successfully inserted");
+		      }
 		});
-		}
-		}
-	});	
-   
+	 }
+   }
+});	
 });
