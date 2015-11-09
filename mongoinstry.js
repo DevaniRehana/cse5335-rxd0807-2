@@ -36,7 +36,7 @@ MongoClient.connect(url,function(err,db){
 			
 			}
 			
-      	  db.collection('employees').insertOne(arr[i], function(err,result){
+      	  db.collection('employees').insertOne(doc, function(err,result){
        		 if(err){
         
              console.log('err'); 
