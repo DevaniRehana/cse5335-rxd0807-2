@@ -9,7 +9,7 @@ MongoClient.connect(url,function(err,db){
 	
 
 var getByName = function(db, callback) {
-   var cursor =db.collection('employees').find({"county":"New York"});
+   var cursor =db.collection('employees').find({"county":"Essex"});
    cursor.each(function(err, doc) {
       assert.equal(err, null);
       if (doc != null) {
