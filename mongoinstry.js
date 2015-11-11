@@ -23,7 +23,7 @@ MongoClient.connect(url,function(err,db){
 
 
 	 for (var i = 0; i < arr.length; i++) {
-	      var doc = {
+	      var doc1 = {
 			_id: arr[i].id,
 			first_name: arr[i].first_name,
 			last_name: arr[i].last_name,
@@ -36,7 +36,7 @@ MongoClient.connect(url,function(err,db){
 			
 			}
 			
-      	  db.collection('employees').insertOne(doc, function(err,result){
+      	  db.collection('employees').insertOne(doc1, function(err,result){
        		 if(err){
         
              console.log('err'); 
