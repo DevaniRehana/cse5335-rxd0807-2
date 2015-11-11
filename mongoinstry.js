@@ -43,7 +43,7 @@ MongoClient.connect(url,function(err,db){
              }
         
              else{
-             console.log(result);
+             //console.log(result);
              console.log("Successfully inserted");
 		      }
 		});
