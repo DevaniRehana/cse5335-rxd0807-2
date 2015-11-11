@@ -12,7 +12,7 @@ var fs  = require("fs");
    	 if (err){
    	    throw err;
    	 }
-   	 response.send(results.rows);
+   	 console.log(results.rows);
 
      
    });
