@@ -7,15 +7,13 @@ var prompt = require('prompt');
 
 prompt.start();
 
-
-    
-    
    
-     prompt.get(['id', 'city'], function (err, result) {
+     prompt.get(['id'], function (err, result) {
     
     console.log('Command-line input received:');
     console.log('  id: ' + result.id);
     console.log('  city: ' + result.city);
+    console.log(' first_name:' + result.first_name);
   });
 
 
