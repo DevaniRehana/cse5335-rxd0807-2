@@ -12,10 +12,12 @@ client.on('connect', function() {
 console.log('Connected to Redis');
 
 
-client.get("*", function(err, valueStr) {
-console.log(valueStr);
-  // var obj = JSON.parse(valueStr);
-   //console.log(""+obj.first_name);
+client.lrange('156', 0, -1, function(err, reply) {
+    console.log(reply); // ['angularjs', 'backbone']
+});
+
+client.lrange('157', 0, -1, function(err, reply) {
+    console.log(reply); // ['angularjs', 'backbone']
 });
 
 
