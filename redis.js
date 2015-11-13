@@ -24,51 +24,12 @@ client.on('connect', function() {
 		    for (var i = 0; i < arrObj.length; i++) {
 		    		    
 	
-	console.log(""+arrObj[i].id+" "+arrObj[i].first_name);
+	
 	var obj = arrObj[i];
-	var id = obj["id"];
-	delete obj["id"];
-	var arrString = JSON.stringify(obj);
 	
-	console.log(encodeURIComponent(arrString));
-	
-	client.get(id, function(err, valueStr) {
-if(valueStr=="" || valueStr==null)
-{
-
-client.set([""+id, encodeURIComponent(arrString)],function(err,res){
-	console.log(res);
-	});
-	
-}
-else
-{
-console.log("already exists");
-
-
-console.log("deleting key "+id);
-client.del(""+id, function(err, reply) {
-    console.log("result "+reply);
-    if(reply=="")
-    {
-    console.log("err "+err);
-    }
+	client.rpush([''+id, obj.first_name,obj.last_name,obj.company_name,obj.address,obj.city,obj.county,obj.state,obj.zip], function(err, reply) {
+    console.log(reply); //prints 2
 });
-
-client.set([""+id, encodeURIComponent(arrString)],function(err,res){
-	console.log(res);
-	});
-
-}
-});
-
-
-	
-	
-	
-	
-	
-	
 	
 	}
 	
