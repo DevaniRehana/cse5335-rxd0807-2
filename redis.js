@@ -22,9 +22,7 @@ client.on('connect', function() {
 			var arrObj = JSON.parse(data);
 			
 		    for (var i = 0; i < arrObj.length; i++) {
-		    
-	//arr[i].id
-		    
+		    		    
 	
 	console.log(""+arrObj[i].id+" "+arrObj[i].first_name);
 	var obj = arrObj[i];
@@ -36,22 +34,6 @@ client.on('connect', function() {
 	console.log(res);
 	});
 	
-	
-	
-	
-	//removing i
-
-		  /*        			
- 		 client.set('framework', 'AngularJS', function(err, reply) {
-  		console.log(reply);
-		    
-       		 		if(err){
-        				console.log('err');
-        			}
-  
-});
-
-	*/
 	
 	}
 	
