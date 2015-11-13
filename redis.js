@@ -8,8 +8,39 @@ client.on('connect', function() {
     console.log('Connected to Redis');
 
 
-client.set('framework', 'AngularJS', function(err, reply) {
-  console.log(reply);
+   var fs  = require("fs");
+   fs.readFile('./us.json', 'utf8', function(err,data){
+
+		if(err)
+		{
+			console.log('err');
+		}
+		
+		else {
+		
+
+			var arr = JSON.parse(data);
+			
+		    for (var i = 0; i < arr.length; i++) {
+		    
+	
+		    
+	client.set(["id", ["first_name","last_name","company_name","address","city","county","state","zip"],function(err,res){});
+
+		  /*        			
+ 		 client.set('framework', 'AngularJS', function(err, reply) {
+  		console.log(reply);
+		    
+       		 		if(err){
+        				console.log('err');
+        			}
+  
 });
+
+	*/
+	client.quit(function (err, res) {
+    console.log('Exiting from quit command.');
+});
+
 
 });
