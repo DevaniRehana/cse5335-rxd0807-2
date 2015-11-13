@@ -13,8 +13,9 @@ console.log('Connected to Redis');
 
 
 client.get('id', function(err, valueStr) {
-   var obj = JSON.parse(valueStr);
-   console.log(""+obj.first_name);
+console.log(valueStr);
+  // var obj = JSON.parse(valueStr);
+   //console.log(""+obj.first_name);
 });
 
 
