@@ -47,7 +47,7 @@ console.log("already exists");
 
 
 console.log("deleting key "+id);
-client.del(id, function(err, reply) {
+client.del(""+id, function(err, reply) {
     console.log(reply);
 });
 
