@@ -19,14 +19,27 @@ client.on('connect', function() {
 		else {
 		
 
-			var arr = JSON.parse(data);
+			var arrObj = JSON.parse(data);
 			
-		    for (var i = 0; i < arr.length; i++) {
+		    for (var i = 0; i < arrObj.length; i++) {
 		    
 	//arr[i].id
 		    
-	client.set(["id", ["first_name","last_name","company_name","address","city","county","state","zip"]],function(err,res){});
-	console.log(""+arr[i].id+" "+arr[i].first_name);
+	
+	console.log(""+arrObj[i].id+" "+arrObj[i].first_name);
+	var obj = arrObj[i];
+	var id = obj["id"];
+	delete obj["id"];
+	var arrString = JSON.stringify(obj);
+	
+	client.set([""+id, arrString],function(err,res){
+	console.log(res);
+	});
+	
+	
+	
+	
+	//removing i
 
 		  /*        			
  		 client.set('framework', 'AngularJS', function(err, reply) {
