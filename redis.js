@@ -29,6 +29,7 @@ client.on('connect', function() {
 	
 	client.rpush([''+obj.id, obj.first_name,obj.last_name,obj.company_name,obj.address,obj.city,obj.county,obj.state,obj.zip], function(err, reply) {
     console.log(reply); //prints 2
+    console.log(err);
 });
 	
 	}
