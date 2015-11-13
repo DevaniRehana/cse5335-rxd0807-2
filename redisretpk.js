@@ -12,7 +12,7 @@ client.on('connect', function() {
 console.log('Connected to Redis');
 
 
-client.get('id', function(err, valueStr) {
+client.get("1111", function(err, valueStr) {
 console.log(valueStr);
   // var obj = JSON.parse(valueStr);
    //console.log(""+obj.first_name);
