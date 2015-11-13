@@ -68,6 +68,11 @@ client.set([""+id, encodeURIComponent(arrString)],function(err,res){
 	
 	}
 	
+	console.log("printing all");
+	client.get('*', function(err, valueStr) {
+	console.log(valueStr);
+	});
+	
 	client.quit(function (err, res) {
     console.log('Exiting from quit command.');
 });
