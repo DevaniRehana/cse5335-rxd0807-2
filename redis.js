@@ -48,7 +48,11 @@ console.log("already exists");
 
 console.log("deleting key "+id);
 client.del(""+id, function(err, reply) {
-    console.log(reply);
+    console.log("result "+reply);
+    if(reply=="")
+    {
+    console.log("err "+err);
+    }
 });
 
 client.set([""+id, encodeURIComponent(arrString)],function(err,res){
