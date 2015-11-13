@@ -32,9 +32,38 @@ client.on('connect', function() {
 	
 	console.log(encodeURIComponent(arrString));
 	
-	client.set([""+id, encodeURIComponent(arrString)],function(err,res){
+	client.get(id, function(err, valueStr) {
+if(valueStr=="" || valueStr==null)
+{
+
+client.set([""+id, encodeURIComponent(arrString)],function(err,res){
 	console.log(res);
 	});
+	
+}
+else
+{
+console.log("already exists");
+
+
+console.log("deleting key "+id);
+client.del(id, function(err, reply) {
+    console.log(reply);
+});
+
+client.set([""+id, encodeURIComponent(arrString)],function(err,res){
+	console.log(res);
+	});
+
+}
+});
+
+
+	
+	
+	
+	
+	
 	
 	
 	}
