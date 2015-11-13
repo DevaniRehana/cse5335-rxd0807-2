@@ -23,9 +23,9 @@ client.on('connect', function() {
 			
 		    for (var i = 0; i < arr.length; i++) {
 		    
-	
+	//arr[i].id
 		    
-	client.set(["id", ["first_name","last_name","company_name","address","city","county","state","zip"],function(err,res){});
+	client.set(["id", ["first_name","last_name","company_name","address","city","county","state","zip"]],function(err,res){});
 
 		  /*        			
  		 client.set('framework', 'AngularJS', function(err, reply) {
