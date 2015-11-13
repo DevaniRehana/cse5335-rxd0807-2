@@ -30,9 +30,9 @@ client.on('connect', function() {
 	delete obj["id"];
 	var arrString = JSON.stringify(obj);
 	
-	console.log(arrString);
+	console.log(encodeURIComponent(arrString));
 	
-	client.set([""+id, arrString],function(err,res){
+	client.set([""+id, encodeURIComponent(arrString)],function(err,res){
 	console.log(res);
 	});
 	
