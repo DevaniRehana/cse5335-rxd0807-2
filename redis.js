@@ -26,7 +26,7 @@ client.on('connect', function() {
 	//arr[i].id
 		    
 	client.set(["id", ["first_name","last_name","company_name","address","city","county","state","zip"]],function(err,res){});
-	console.log(i);
+	console.log(""+arr[i].id+" "+arr[i].first_name);
 
 		  /*        			
  		 client.set('framework', 'AngularJS', function(err, reply) {
