@@ -21,6 +21,14 @@ client.lrange('157', 0, -1, function(err, reply) {
 });
 
 
+client.hgetall('158', function(err, object) {
+    console.log(object);
+});
+
+client.hgetall('159', function(err, object) {
+    console.log(object);
+});
+
 
 
 });
