@@ -38,9 +38,12 @@ client.on('connect', function() {
 });
 
 	*/
+	
+	}
+	
 	client.quit(function (err, res) {
     console.log('Exiting from quit command.');
 });
 
-
+}
 });
