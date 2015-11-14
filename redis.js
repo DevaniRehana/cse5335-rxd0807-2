@@ -6,10 +6,10 @@ client.auth('p8naufj27ovrb0c31g4iru1gk18');
 
 
 try
-    console.log "clean sessions"
+    console.log("clean sessions");
     redis.flushdb()
   catch err
-    console.log "error:", err
+    console.log("error:", err);
 
 
 /*
