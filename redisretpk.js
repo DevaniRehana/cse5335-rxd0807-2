@@ -2,16 +2,16 @@
 
 
 
-
 var redis = require('redis');
-var client = redis.createClient(6499, 'ec2-54-83-59-218.compute-1.amazonaws.com');
-client.auth('p8naufj27ovrb0c31g4iru1gk18');
+var client = redis.createClient(18199, 'ec2-54-83-9-36.compute-1.amazonaws.com');
+client.auth('p7ue7eg7cab4re7m4qejdl08p3s');
+
 
 
 client.on('connect', function() {
 console.log('Connected to Redis');
 
-
+/*
 client.lrange('156', 0, -1, function(err, reply) {
     console.log(reply); // ['angularjs', 'backbone']
 });
@@ -19,16 +19,15 @@ client.lrange('156', 0, -1, function(err, reply) {
 client.lrange('157', 0, -1, function(err, reply) {
     console.log(reply); // ['angularjs', 'backbone']
 });
+*/
 
-
-client.hgetall('158', function(err, object) {
+client.hgetall('1', function(err, object) {
     console.log(object);
 });
 
-client.hgetall('159', function(err, object) {
+client.hgetall('2', function(err, object) {
     console.log(object);
 });
 
-
-
 });
+
