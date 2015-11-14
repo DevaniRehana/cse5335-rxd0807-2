@@ -12,13 +12,12 @@ try
     console.log("error:", err);
 
 
-/*
 
 
 
 client.on('connect', function() {
 console.log('Connected to Redis');
-});
+
 
 
 
@@ -49,15 +48,6 @@ console.log('Connected to Redis');
 	*/
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	/*
-	
 	client.hmset(''+obj.id, obj, function(err, object) {
     console.log(object);
 });
@@ -74,5 +64,5 @@ console.log('Connected to Redis');
 });
 
 
-*/
+});
 
