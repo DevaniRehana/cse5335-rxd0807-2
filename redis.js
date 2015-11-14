@@ -9,10 +9,7 @@ console.log('Connected to Redis');
 
 
 
-redis.keys("sess:*", function(err, key) {
-redis.del(key, function(err) {
-  });
-});
+redis.flushdb();
 
 
 
