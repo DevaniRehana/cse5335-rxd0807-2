@@ -33,14 +33,16 @@ client.keys('*', function (keys) {
            console.log("key "+key);
         }
      });
-/*
+
 client.hgetall('*', function(err, object) {
     console.log(object);
     
 });
 
-
-
-*/
+client.scan([], function(result){
+ console.log(result);
+}, function(err){
+ 
+});
 });
 
