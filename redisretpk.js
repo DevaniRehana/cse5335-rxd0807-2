@@ -56,6 +56,12 @@ var toArray = require('stream-to-array')
 toArray(client.scan(), function(err, arr) {
   if (err)
     throw err;
+ for (key in arr)
+ {
+ 	client.hgetall(key, function(err, object) {
+    console.log(object);
+});
+ }
  
   console.log(arr)
 })
