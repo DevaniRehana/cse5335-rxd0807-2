@@ -1,7 +1,7 @@
 
 var redis = require('redis');
 
-var redis_scanner = require('redis-scanstreams');
+var redis_scanner = require('redis-scanstreams')(redis);
 
 var client = redis.createClient(18199, 'ec2-54-83-9-36.compute-1.amazonaws.com');
 
