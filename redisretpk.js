@@ -27,9 +27,20 @@ client.hgetall('1', function(err, object) {
 
 */
 
+
+client.keys('*', function (keys) {
+        for (key in keys) {
+           console.log(key);
+        }
+     });
+/*
 client.hgetall('*', function(err, object) {
     console.log(object);
+    
 });
 
+
+
+*/
 });
 
