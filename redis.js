@@ -45,6 +45,16 @@ redis.del(key, function(err) {
 });
 	*/
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
+	
 	client.hmset(''+obj.id, obj, function(err, object) {
     console.log(object);
 });
