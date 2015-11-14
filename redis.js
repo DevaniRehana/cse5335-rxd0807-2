@@ -4,17 +4,23 @@ var client = redis.createClient(6499, 'ec2-54-83-59-218.compute-1.amazonaws.com'
 client.auth('p8naufj27ovrb0c31g4iru1gk18');
 
 
+
+try
+    console.log "clean sessions"
+    redis.flushdb()
+  catch err
+    console.log "error:", err
+
+
+/*
+
+
+
 client.on('connect', function() {
 console.log('Connected to Redis');
-
-
-
-redis.flushdb();
-
-
-
 });
-/*
+
+
 
 
    var fs  = require("fs");
