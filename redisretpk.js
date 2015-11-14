@@ -19,13 +19,15 @@ client.lrange('156', 0, -1, function(err, reply) {
 client.lrange('157', 0, -1, function(err, reply) {
     console.log(reply); // ['angularjs', 'backbone']
 });
-*/
+
 
 client.hgetall('1', function(err, object) {
     console.log(object);
 });
 
-client.hgetall('2', function(err, object) {
+*/
+
+client.hgetall('*', function(err, object) {
     console.log(object);
 });
 
