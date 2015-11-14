@@ -5,7 +5,19 @@ client.auth('p8naufj27ovrb0c31g4iru1gk18');
 
 
 client.on('connect', function() {
-    console.log('Connected to Redis');
+console.log('Connected to Redis');
+
+
+
+redis.keys("sess:*", function(err, key) {
+redis.del(key, function(err) {
+  });
+});
+
+
+
+});
+/*
 
 
    var fs  = require("fs");
@@ -47,4 +59,7 @@ client.on('connect', function() {
 
 }
 });
-});
+
+
+*/
+
