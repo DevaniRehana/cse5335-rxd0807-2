@@ -13,47 +13,45 @@ console.log('Connected to Redis');
 
 
 
-var prompt = require('prompt');
+		var prompt = require('prompt');
 
-prompt.start();
-
+		prompt.start();
    
-     prompt.get(['city'], function (err, result) {
-    
-    console.log(' Results for city: ' + result.city);
+        prompt.get(['city'], function (err, result) {
+        console.log(' Results for city: ' + result.city);
   
 
 
-var toArray = require('stream-to-array')
+        var toArray = require('stream-to-array')
  
-toArray(client.scan(), function(err, arr) {
-  if (err)
-    throw err;
- for (key in arr)
- {
- 	client.hgetall(key, function(err, object) {
+        toArray(client.scan(), function(err, arr) {
+            if (err)
+            throw err;
+            
+        for (key in arr)
+        {
+ 	        client.hgetall(key, function(err, object) {
+ 	        //console.log(object);
  	
- 	//console.log(object);
+ 	        for (var key in object) {
+ 			//console.log(key);
+ 	        var value = object[key];
+ 			//console.log(object[a]);
  	
- 	for (var key in object) {
- 	//console.log(key);
- 	var value = object[key];
- 	//console.log(object[a]);
+ 	          if(key=="city" && value==result.city){
+ 	          console.log(object);
+ 	          }
  	
- 	if(key=="city" && value==result.city){
- 	console.log(object);
- 	}
- 	
- 	}
+ 	        }
  	
     
     
-});
- }
+         });
+      }
  
   console.log(arr)
-})
+     })
 
-});
+   });
 });
 
