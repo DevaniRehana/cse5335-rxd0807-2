@@ -30,13 +30,19 @@ console.log('Connected to Redis');
     console.log("reply "+reply); //prints 2
     console.log(err);
 });
-	*/
+	
 	
 	
 	client.hmset(''+obj.id, JSON.stringify(obj), function(err, object) {
-    console.log(object);
+    console.log(JSON.stringify(obj));
 });
-	
+
+*/
+
+
+client.hmset(''+obj.id, obj, function(err, object) {
+    console.log(object);
+	});
 	}
 	
 	client.quit(function (err, res) {
