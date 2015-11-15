@@ -61,11 +61,7 @@ toArray(client.scan(), function(err, arr) {
  	client.hgetall(key, function(err, object) {
  	
  	
- 	//console.log(object.city);
- 	console.log(object.toString());
- 	
- 	var objStr = JSON.parse(object.toString());
- 	console.log(objStr);
+ 	console.log(object);
  	
     
     
