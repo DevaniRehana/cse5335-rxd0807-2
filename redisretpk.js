@@ -62,9 +62,9 @@ toArray(client.scan(), function(err, arr) {
  	
  	console.log(object);
  	
- 	object.keys(a).map(function(key){
- 	console.log(key);
- 	});
+ 	for (var a in object) {
+ 	console.log(a);
+ 	}
  	
     
     
