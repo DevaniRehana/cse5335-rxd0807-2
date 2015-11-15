@@ -51,6 +51,20 @@ client.scan([], function(result){
 
 
 */
+
+var prompt = require('prompt');
+
+prompt.start();
+
+   
+     prompt.get(['id','city'], function (err, result) {
+    
+    console.log('Command-line input received:');
+    console.log('  id: ' + result.id);
+    console.log('  city: ' + result.city);
+  
+
+
 var toArray = require('stream-to-array')
  
 toArray(client.scan(), function(err, arr) {
@@ -67,7 +81,7 @@ toArray(client.scan(), function(err, arr) {
  	var value = object[key];
  	//console.log(object[a]);
  	
- 	if(key=="city" && value=="New York"){
+ 	if(key=="city" && value==result.city){
  	console.log(object);
  	}
  	
@@ -80,5 +94,7 @@ toArray(client.scan(), function(err, arr) {
  
   console.log(arr)
 })
+
+});
 });
 
