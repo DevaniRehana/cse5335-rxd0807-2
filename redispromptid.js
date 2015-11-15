@@ -28,7 +28,7 @@ client.hgetall('1', function(err, object) {
 });
 
 */
-
+/*
 
 client.keys('*', function (keys) {
         for (key in keys) {
@@ -52,6 +52,18 @@ client.scan([], function(result){
 
 */
 
+var prompt = require('prompt');
+
+prompt.start();
+
+   
+     prompt.get(['id'], function (err, result) {
+    
+    //console.log('Command-line input received:');
+    
+    console.log(' Results for id: ' + result.id);
+  
+
 
 var toArray = require('stream-to-array')
  
@@ -69,7 +81,7 @@ toArray(client.scan(), function(err, arr) {
  	var value = object[key];
  	//console.log(object[a]);
  	
- 	if(key=="city" && value=="New York"){
+ 	if(key=="id" && value==result.id){
  	console.log(object);
  	}
  	
@@ -82,5 +94,7 @@ toArray(client.scan(), function(err, arr) {
  
   console.log(arr)
 })
+
+});
 });
 
