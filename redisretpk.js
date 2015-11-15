@@ -60,8 +60,9 @@ toArray(client.scan(), function(err, arr) {
  {
  	client.hgetall(key, function(err, object) {
  	
- 	
  	console.log(object);
+ 	
+ 	console.log(JSON.parse(object));
  	
     
     
