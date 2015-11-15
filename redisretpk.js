@@ -74,9 +74,7 @@ toArray(client.scan(), function(err, arr) {
  	}
  	
  	}
- 	
-    
-    
+ 	  
 });
  }
  
