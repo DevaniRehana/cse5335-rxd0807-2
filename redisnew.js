@@ -40,11 +40,3 @@ console.log('Connected to Redis');
 
 
 
-
-
-
-	client.hmset(''+obj.id, JSON.stringify(obj), function(err, object) {
-    console.log(JSON.stringify(obj));
-});
-
-*/

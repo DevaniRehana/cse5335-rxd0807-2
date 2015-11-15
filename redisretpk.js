@@ -10,56 +10,33 @@ client.auth('p7ue7eg7cab4re7m4qejdl08p3s');
 client.on('connect', function() {
 console.log('Connected to Redis');
 
-/*
-client.keys('*', function (keys) {
-        for (key in keys) {
-           console.log("key "+key);
-        }
-     });
-
-client.hgetall('*', function(err, object) {
-    console.log(object);
-    
-});
-
-*/
-/*
-client.scan([], function(result){
- console.log(result);
-}, function(err){
+		var toArray = require('stream-to-array')
  
-});
-
-
-*/
-
-
-var toArray = require('stream-to-array')
- 
-toArray(client.scan(), function(err, arr) {
-  if (err)
-    throw err;
- for (key in arr)
- {
- 	client.hgetall(key, function(err, object) {
+		toArray(client.scan(), function(err, arr) {
+  			if (err)
+    		throw err;
+    		
+ 		for (key in arr)
+	    {
+ 			client.hgetall(key, function(err, object) {
  	
- 	//console.log(object);
+ 	       //console.log(object);
  	
- 	for (var key in object) {
- 	//console.log(key);
- 	var value = object[key];
- 	//console.log(object[a]);
+ 			for (var key in object) {
+ 	      //console.log(key);
+ 				var value = object[key];
+ 	      //console.log(object[a]);
  	
- 	if(key=="city" && value=="New York"){
- 	console.log(object);
- 	}
+ 					if(key=="city" && value=="New York"){
+ 					console.log(object);
+ 					}
  	
- 	}
+ 				}
  	  
-});
- }
+			});
+ 		}
  
-  console.log(arr)
-})
-});
+  	console.log(arr)
+	})
+  });
 
