@@ -59,7 +59,7 @@ toArray(client.scan(), function(err, arr) {
  for (key in arr)
  {
  	client.hgetall(key, function(err, object) {
- 	console.log(object.city);
+ 	//console.log(object.city);
  	console.log(object['city']);
  	
  	if(object.city=="San Jose")
