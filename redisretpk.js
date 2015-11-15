@@ -59,13 +59,14 @@ toArray(client.scan(), function(err, arr) {
  for (key in arr)
  {
  	client.hgetall(key, function(err, object) {
- 	//console.log(object.city);
- 	console.log(object['city']);
  	
- 	if(object.city=="San Jose")
- 	{
- 	console.log(object);
- 	}
+ 	
+ 	//console.log(object.city);
+ 	console.log(object.toString());
+ 	
+ 	var objStr = JSON.parse(object.toString());
+ 	console.log(objStr);
+ 	
     
     
 });
