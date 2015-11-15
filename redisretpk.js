@@ -64,6 +64,7 @@ toArray(client.scan(), function(err, arr) {
  	
  	for (var a in object) {
  	console.log(a);
+ 	console.log(object[a]);
  	}
  	
     
