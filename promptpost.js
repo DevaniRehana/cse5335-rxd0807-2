@@ -6,44 +6,26 @@ var fs  = require("fs");
 var prompt = require('prompt');
 
 prompt.start();
+        
+   	
 
-         var query = client.query("SELECT * FROM employee where id = prompt.get['id']", function(err, results){
+     prompt.get(['id'] , function (err, result) {
+    
+    console.log('Command-line input received:');
+    console.log('  you entered id ' + result.id);
+    
+    
+    
+     
+         var query = client.query("SELECT * FROM employee where id = result.id", function(err, results){
          if (err){
    	    throw err;
    	 }
-   	 else
-   	 {
-    console.log(results);
-}
+   	    	 console.log(results.rows);
 
-
-});
-/*
-
-     prompt.get(['id'], function (err, result) {
-    
-    console.log('Command-line input received:');
-    console.log('  id: ' + result.id);
-    console.log('  city: ' + result.city);
   });
+});
 
-
-
-
-    
-
-
-   
-    var query = client.query("SELECT * FROM employee where id = 1", function(err, results){
-   	 if (err){
-   	    throw err;
-   	 }
-   	 console.log(results.rows);
-
-     
-   });
-          
-    */
     
     
 
