@@ -21,34 +21,30 @@ console.log('Connected to Redis');
 			var arrObj = JSON.parse(data);
 			
 		    for (var i = 0; i < arrObj.length; i++) {
-		    		    
 	
+					var obj = arrObj[i];
 	
-	var obj = arrObj[i];
-	/*
-	client.rpush([''+obj.id, obj.first_name,obj.last_name,obj.company_name,obj.address,obj.city,obj.county,obj.state,""+obj.zip], function(err, reply) {
-    console.log("reply "+reply); //prints 2
-    console.log(err);
+					client.hmset(''+obj.id, obj, function(err, object) {
+   				    console.log(object);
+					});
+				}
+				
+	
+		client.quit(function (err, res) {
+    	console.log('Exiting from quit command.');
+		});
+
+	  }
+   });
 });
-	
-	
-	
+
+
+
+
+
+
 	client.hmset(''+obj.id, JSON.stringify(obj), function(err, object) {
     console.log(JSON.stringify(obj));
 });
 
 */
-
-
-client.hmset(''+obj.id, obj, function(err, object) {
-    console.log(object);
-	});
-	}
-	
-	client.quit(function (err, res) {
-    console.log('Exiting from quit command.');
-});
-
-}
-});
-});
