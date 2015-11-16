@@ -1,10 +1,10 @@
-                                CSE 5335
-                            WEB DATA MANAGEMENT
+                    			CSE 5335
+                			WEB DATA MANAGEMENT
 
-                                PROJECT 2
+                    			PROJECT 2
 
-NAME: REHANA DEVANI 
-ID: 1001100807 
+NAME: REHANA DEVANI
+ID: 1001100807
 NET ID: rxd0807
 
 1.  What is your external data source used to populate your Heroku data
@@ -22,9 +22,9 @@ Postgres database:
 
 node createPostgres.js
 
-(Before running the above command to create a table, run the below
-command to drop the existing table and uncomment the drop query in the
-below script)
+(Before running the above command to create a table, run the below command to drop the 
+existing table and uncomment the drop query in the below script)
+
 
 node postgres-insert.js
 
