@@ -11,10 +11,9 @@ client.auth('p7ue7eg7cab4re7m4qejdl08p3s');
 client.on('connect', function() {
 console.log('Connected to Redis');
 
+		var prompt = require('prompt');
 
-			var prompt = require('prompt');
-			prompt.start();
-
+		prompt.start();
    
      		prompt.get(['id'], function (err, result) {
     		//console.log('Command-line input received:');
