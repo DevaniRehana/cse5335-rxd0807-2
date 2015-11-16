@@ -23,11 +23,14 @@ MongoClient.connect(url,function(err,db){
 var getById = function(db, callback) {
    var cursor =db.collection('employees').find([result.id]);
    //var cursor =db.collection('employees').find(['id']);
+           console.log('inside cursor');
 
    cursor.each(function(err, doc) {
+
       assert.equal(err, null);
       if (doc != null) {
-         console.log('inside id');
+         console.log('inside if');
+
          console.dir(doc);
       } else {
          callback();
