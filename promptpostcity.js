@@ -17,7 +17,7 @@ prompt.start();
     
     
     
-         var query = client.query("SELECT * FROM employee where county like " +result.pcity, function(err, results){
+         var query = client.query("SELECT * FROM employee where county like '" +result.pcity+"'", function(err, results){
          if (err){
    	    throw err;
    	 }
