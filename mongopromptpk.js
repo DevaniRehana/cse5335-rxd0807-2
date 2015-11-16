@@ -21,7 +21,7 @@ MongoClient.connect(url,function(err,db){
   
 
 var getById = function(db, callback) {
-   var cursor =db.collection('employees').find(['id']);
+   var cursor =db.collection('employees').find(['result.id']);
    cursor.each(function(err, doc) {
       assert.equal(err, null);
       if (doc != null) {
