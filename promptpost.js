@@ -17,7 +17,7 @@ prompt.start();
     
     
      
-         var query = client.query("SELECT * FROM employee where id = result.id", function(err, results){
+         var query = client.query("SELECT * FROM employee where id = 'id'", function(err, results){
          if (err){
    	    throw err;
    	 }
