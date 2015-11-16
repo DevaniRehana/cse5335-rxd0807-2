@@ -9,7 +9,7 @@ prompt.start();
         
    	
 
-    prompt_id =  prompt.get(['pid'] , function (err, result) {
+  int  prompt_id =  prompt.get(['pid'] , function (err, result) {
     
     console.log('Command-line input received:');
     console.log('  you entered id ' + result.id);
