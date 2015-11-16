@@ -9,7 +9,7 @@ prompt.start();
         
    	
 
-     prompt.get(['id'] , function (err, result) {
+     prompt.get(['pid'] , function (err, result) {
     
     console.log('Command-line input received:');
     console.log('  you entered id ' + result.id);
@@ -17,7 +17,7 @@ prompt.start();
     
     
      
-         var query = client.query("SELECT * FROM employee where id = @id", function(err, results){
+         var query = client.query("SELECT * FROM employee where id = @pid", function(err, results){
          if (err){
    	    throw err;
    	 }
