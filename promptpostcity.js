@@ -12,12 +12,12 @@ prompt.start();
    prompt.get(['pcity'] , function (err, result) {
     
     console.log('Command-line input received:');
-    console.log('  you entered id ' + result.pcity);
+    console.log('  you entered city ' + result.pcity);
     
     
     
     
-         var query = client.query("SELECT * FROM employee where city =" +result.pcity, function(err, results){
+         var query = client.query("SELECT * FROM employee where county like" +result.pcity, function(err, results){
          if (err){
    	    throw err;
    	 }
