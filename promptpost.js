@@ -12,12 +12,12 @@ prompt.start();
    prompt.get(['pid'] , function (err, result) {
     
     console.log('Command-line input received:');
-    console.log('  you entered id ' + result);
+    console.log('  you entered id ' + result.pid);
     
     
     
     
-         var query = client.query("SELECT * FROM employee where id =" +result, function(err, results){
+         var query = client.query("SELECT * FROM employee where id =" +result.pid, function(err, results){
          if (err){
    	    throw err;
    	 }
