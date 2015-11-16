@@ -15,13 +15,13 @@ MongoClient.connect(url,function(err,db){
 
 		prompt.start();
    
-       prompt.get(['id'], function (err, result) {
+       prompt.get(['city'], function (err, result) {
     		//console.log('Command-line input received:');
-   		   console.log(' Results for id: ' + result.id);
+   		   console.log(' Results for id: ' + result.city);
   
 
 var getById = function(db, callback) {
-   var cursor =db.collection('employees').find({"_id":parseInt(result.id)});
+   var cursor =db.collection('employees').find({"city":result.city});
    //var cursor =db.collection('employees').find(['id']);
 
    cursor.each(function(err, doc) {
