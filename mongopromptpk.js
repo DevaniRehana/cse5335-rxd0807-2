@@ -26,7 +26,7 @@ var getById = function(db, callback) {
            console.log('inside cursor');
 
    cursor.each(function(err, doc) {
-
+      console.log("doc "+doc);
       assert.equal(err, null);
       if (doc != null) {
          console.log('inside if');
