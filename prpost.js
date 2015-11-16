@@ -6,17 +6,12 @@ var fs  = require("fs");
 
 
 var readlineSync = require('readline-sync');
- 
-// Wait for user's response. 
+
 var pid = readlineSync.question('May I have your ID? :');
 
-
-
-    var query = client.query("SELECT * FROM employee where county id='pid'", function(err, results){
+var query = client.query("SELECT * FROM employee where county id=" +pid, function(err, results){
    	 if (err){
    	    throw err;
    	 }
    	 console.log(results.rows);
-
-     
    });
