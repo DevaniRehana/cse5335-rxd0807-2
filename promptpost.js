@@ -15,16 +15,16 @@ prompt.start();
     console.log('  you entered id ' + result.id);
     
     
-    
+    });
      
-         var query = client.query("SELECT * FROM employee where id = @pid", function(err, results){
+         var query = client.query("SELECT * FROM employee where id = @result.id", function(err, results){
          if (err){
    	    throw err;
    	 }
    	    	 console.log(results.rows);
 
   });
-});
+
 
     
     
